@@ -22,7 +22,7 @@ Open new terminal window/tab and run
 
 or
 
-`npm server`
+`npm run server`
 
 ### Compiles and minifies for production
 
