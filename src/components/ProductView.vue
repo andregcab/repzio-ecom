@@ -12,8 +12,8 @@
     <div class="product-info">
       <p class="product-name">{{ product.ItemName }}</p>
       <div class="secondary-info">
-        <p class="product-price">{{ `$${parseFloat(product.BasePrice).toFixed(2)}` }}</p>
-        <p class="product-dims">{{ product.Dimensions?.toLowerCase() }}</p>
+        <p class="product-price">{{ productPrice }}</p>
+        <p class="product-dims">{{ productDims }}</p>
         <p class="product-description">{{ product.Description }}</p>
         <p class="product-stock">{{ inStockAmount }} left in stock</p>
         <div class="ids">
@@ -37,6 +37,12 @@ export default {
     },
     inStockAmount() {
       return this.outOfStock ? 0 : this.product.OnHandQuantity;
+    },
+    productPrice() {
+      return `$${parseFloat(this.product.BasePrice).toFixed(2)}`;
+    },
+    productDims() {
+      return this.product.Dimensions?.toLowerCase();
     },
   },
 };

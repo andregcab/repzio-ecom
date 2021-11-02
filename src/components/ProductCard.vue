@@ -15,7 +15,7 @@
       <div class="product-info">
         <p class="product-name">{{ product.ItemName }}</p>
         <div class="secondary-info">
-          <p class="product-price">{{ `$${parseFloat(product.BasePrice).toFixed(2)}` }}</p>
+          <p class="product-price">{{ productPrice }}</p>
           <div class="ids">
             <span class="id">mfg id: {{ product.ManufacturerID }}</span>
             <span class="id">product# {{ product.id }}</span>
@@ -35,6 +35,9 @@ export default {
   computed: {
     outOfStock() {
       return this.product.OnHandQuantity <= 0;
+    },
+    productPrice() {
+      return `$${parseFloat(this.product.BasePrice).toFixed(2)}`;
     },
   },
 };

@@ -1,11 +1,13 @@
 <template>
   <header>
     <div class="branding">
-      <img
-        className="repzio-logo-img"
-        src="https://images.repzio.com/productimages/772/logo772_lg.jpg?w=200"
-        alt="repzio-logo"
-      />
+      <router-link class="back-link" to="/">
+        <img
+          className="repzio-logo-img"
+          src="https://images.repzio.com/productimages/772/logo772_lg.jpg?w=180"
+          alt="repzio-logo"
+        />
+      </router-link>
     </div>
     <div class="links">
       <a class="nav-link my-acct" href="/">My Account</a>

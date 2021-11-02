@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="message-info">
-        <h6>Note:</h6>
+        <h6>Rep note:</h6>
         <p class="message">{{ companyInfo.Message }}</p>
       </div>
     </div>
